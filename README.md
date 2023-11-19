@@ -1,2 +1,2 @@
 # steam-deck-oversteer
-A way to install Oversteer for steering wheel support easily on the Steam Deck
+A way to easily install Oversteer for steering wheel support on the Steam Deck
