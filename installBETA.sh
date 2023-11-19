@@ -32,7 +32,6 @@ install_package() {
     fi
 }
 
-
 # Disabling read-only permission
 steamos-readonly disable
 
