@@ -65,6 +65,7 @@ if pacman -S --noconfirm usb_modeswitch; then
     echo "usb_modeswitch installed successfully."
 else
     echo "Error installing usb_modeswitch. Exiting."
+    zenity --info --text="Error installing usb_modeswitch. Exiting." --width=300
     exit 1
 fi
 
@@ -74,6 +75,7 @@ if git clone https://github.com/berarma/oversteer.git; then
     echo "Oversteer repository cloned successfully."
 else
     echo "Error cloning Oversteer repository. Exiting."
+    zenity --info --text="Error cloning Oversteer repository. Exiting." --width=300
     exit 1
 fi
 
@@ -84,6 +86,7 @@ if meson build; then
     echo "Build system prepared successfully."
 else
     echo "Error preparing build system. Exiting."
+    zenity --info --text="Error preparing build system. Exiting." --width=300
     exit 1
 fi
 
@@ -92,8 +95,10 @@ cd build
 echo "Installing Oversteer..."
 if ninja install; then
     echo "Oversteer installed successfully."
+    zenity --info --text="Oversteer installed successfully." --width=300
 else
     echo "Error installing Oversteer. Exiting."
+    zenity --info --text="Error installing Oversteer. Exiting." --width=300
     exit 1
 fi
 
