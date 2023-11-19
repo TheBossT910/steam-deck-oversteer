@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 # Author of install script: TheBossT710192
 # Note: Oversteer is NOT my program. Many thanks to the folks who made this program and have contributed to it!
 # Oversteer repository: https://github.com/berarma/oversteer
@@ -9,7 +9,7 @@ steamos-readonly disable
 #installing packages
 pacman -S python python-pip python-numpy ninja blas
 
-#dependancies needed for Oversteer
+#dependencies needed for Oversteer
 pacman -S python-gobject python-pyudev python-pyxdg python-evdev gettext meson appstream-glib desktop-file-utils python-matplotlib python-scipy
 
 #more installing
