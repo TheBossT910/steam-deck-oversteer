@@ -10,7 +10,7 @@ steamos-readonly disable
 pacman -S python python-pip python-numpy ninja blas
 
 #dependancies needed for Oversteer
-pacman -S python python-gobject python-pyudev python-pyxdg python-evdev gettext meson appstream-glib desktop-file-utils python-matplotlib python-scipy
+pacman -S python-gobject python-pyudev python-pyxdg python-evdev gettext meson appstream-glib desktop-file-utils python-matplotlib python-scipy
 
 #more installing
 pacman -S python-cycler python-fonttools python-kiwisolver python-packaging python-pillow python-pyparsing python-dateutil python-cairo python-cairocffi lapack
@@ -19,8 +19,19 @@ pacman -S python-cycler python-fonttools python-kiwisolver python-packaging pyth
 pip install --upgrade numpy
 pip install --upgrade matplotlib
 
-#allwoing usb input of steering wheel
+#allowing usb input of steering wheel
 sudo pacman -S usb_modeswitch
 
+#installing Oversteer
+git clone https://github.com/berarma/oversteer.git
+cd oversteer
+
+#Prepare build system
+meson build
+cd build
+
+#installing
+ninja install
+
 #Print install completed message
-zenity --info --text="Install of Oversteer has been completed!" --width=300
+zenity --info --text="Install of Oversteer has been completed! Please restart your Steam Deck for Oversteer to begin to work properly!" --width=300
