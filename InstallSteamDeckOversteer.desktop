@@ -1,7 +1,7 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Install Oversteer for Steam Deck
-Exec=sudo curl https://raw.githubusercontent.com/TheBossT910/steam-deck-oversteer/main/installBETA.sh | bash -s --
+Exec=sudo curl https://raw.githubusercontent.com/TheBossT910/steam-deck-oversteer/main/installBETA2.sh | bash -s --
 Icon=steamdeck-gaming-return
 Terminal=true
 Type=Application
